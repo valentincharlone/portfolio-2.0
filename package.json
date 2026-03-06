@@ -10,11 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/logos": "^1.2.10",
+    "@iconify-json/lucide": "^1.2.95",
     "@iconify-json/simple-icons": "^1.2.72",
     "astro": "^4.16.0",
     "astro-icon": "^1.1.5",
+    "framer-motion": "^12.35.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "tailwindcss": "^3.4.1"
   }
 }

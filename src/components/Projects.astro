@@ -1,39 +1,30 @@
 ---
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Simple Profits – Analytics Dashboard",
     description:
-      "A modern, full-stack e-commerce solution with real-time inventory management, Stripe integration, and a beautiful responsive UI.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
-    github: "https://github.com",
-    demo: "https://example.com",
+      "E-commerce analytics SaaS platform for store owners. Built complex data visualizations, dynamic filtering, REST APIs with Django, authentication, and third-party integrations.",
+    tech: ["React", "Recharts", "Django", "REST API"],
+    github: "#",
+    demo: "https://simpleprofits.ai",
     featured: true,
   },
   {
-    title: "AI Dashboard",
+    title: "Tuxdi – Corporate Web Platform",
     description:
-      "Analytics dashboard powered by machine learning, featuring real-time data visualization and predictive insights.",
-    tech: ["React", "Python", "TensorFlow", "D3.js"],
-    github: "https://github.com",
-    demo: "https://example.com",
+      "Product and marketing development across CMS platforms. Led Next.js 12→14 migration, built Back Office dashboards, integrated Strapi CMS, and implemented i18n and advanced animations.",
+    tech: ["Next.js", "TypeScript", "Framer Motion", "Strapi"],
+    github: "#",
+    demo: "https://tuxdi.com",
     featured: true,
-  },
-  {
-    title: "Task Management App",
-    description:
-      "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team workspaces.",
-    tech: ["Next.js", "Supabase", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://example.com",
-    featured: false,
   },
   {
     title: "Developer Portfolio",
     description:
-      "A minimal, modern portfolio template for developers built with performance and accessibility in mind.",
+      "A minimal, modern portfolio built with Astro and TailwindCSS. Responsive, accessible, and optimized for performance with smooth animations.",
     tech: ["Astro", "TypeScript", "Tailwind"],
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/valentincharlone/portfolio-2.0",
+    demo: "#",
     featured: false,
   },
 ];
@@ -56,7 +47,7 @@ const projects = [
       {
         projects.map((project, index) => (
           <article class="group relative bg-surface border border-border rounded-2xl p-6 md:p-8 hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5">
-            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
             <div class="relative">
               {project.featured && (
@@ -129,7 +120,7 @@ const projects = [
 
     <div class="text-center mt-12">
       <a
-        href="https://github.com"
+        href="https://github.com/valentincharlone"
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center px-6 py-3 text-sm font-medium text-text-secondary border border-border rounded-lg hover:text-text-primary hover:border-text-muted transition-all duration-200"

@@ -1,89 +1,95 @@
 ---
 const experiences = [
   {
-    company: 'TechCorp Inc.',
-    role: 'Senior Frontend Developer',
-    period: '2022 - Present',
+    company: 'Simple Profits',
+    role: 'Frontend Freelance → Full Stack Developer',
+    period: 'Feb 2025 – Jan 2026',
     description: [
-      'Led the frontend architecture redesign, improving performance by 40%',
-      'Mentored junior developers and established coding standards',
-      'Built reusable component library used across 5+ products'
+      'Led the development of a scalable analytics dashboard for e-commerce store owners, handling real-time sales and performance data',
+      'Built complex data visualizations and dynamic filtering systems using React and Recharts',
+      'Designed and integrated REST APIs using Django REST Framework',
+      'Optimized ORM queries and improved dashboard performance and data response times',
+      'Implemented authentication, protected routes, and session management',
+      'Integrated third-party e-commerce platforms and automated sales data ingestion'
+    ],
+    current: false
+  },
+  {
+    company: 'Tuxdi',
+    role: 'Frontend Engineer',
+    period: 'April 2023 – July 2025',
+    description: [
+      'Led migration from Next.js 12 to Next.js 14, improving maintainability and performance',
+      'Developed scalable and reusable component architectures across product and marketing platforms',
+      'Built Back Office dashboards with key metrics for media managers',
+      'Implemented full internationalization (ES/EN) for US-based clients',
+      'Integrated Strapi CMS for dynamic content management',
+      'Implemented advanced animation systems using Framer Motion and GSAP'
+    ],
+    current: false
+  },
+  {
+    company: 'Freelance',
+    role: 'Frontend Developer',
+    period: 'July 2022 – Present',
+    description: [
+      'Designed and developed custom web solutions for local businesses using React',
+      'Gathered requirements directly from clients and translated them into scalable technical implementations',
+      'Built responsive applications with modern frontend tooling and reusable components',
+      'Delivered iterative releases with continuous client feedback'
     ],
     current: true
-  },
-  {
-    company: 'StartupXYZ',
-    role: 'Frontend Developer',
-    period: '2020 - 2022',
-    description: [
-      'Developed customer-facing dashboard serving 100k+ users',
-      'Implemented real-time features using WebSockets',
-      'Reduced bundle size by 60% through code splitting'
-    ],
-    current: false
-  },
-  {
-    company: 'Digital Agency',
-    role: 'Junior Developer',
-    period: '2018 - 2020',
-    description: [
-      'Built responsive websites for 20+ clients',
-      'Collaborated with designers to implement pixel-perfect UIs',
-      'Introduced modern CSS practices and animations'
-    ],
-    current: false
   }
 ];
 ---
 
 <section id="experience" class="py-24 md:py-32">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <p class="text-accent font-mono text-sm mb-4">My journey</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">Experience</h2>
-      <p class="text-text-muted max-w-2xl mx-auto">
-        A timeline of my professional growth and the companies I've worked with
-      </p>
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Left-aligned header -->
+    <div class="mb-16">
+      <p class="text-accent font-mono text-sm mb-3">// experience</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-text-primary">Where I've worked</h2>
     </div>
     
-    <div class="relative">
+    <div class="relative pl-8">
       <!-- Timeline line -->
-      <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px"></div>
+      <div class="absolute left-[5px] top-2 bottom-0 w-px bg-border"></div>
       
-      <div class="space-y-12">
-        {experiences.map((exp, index) => (
-          <div class={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+      <div class="space-y-14">
+        {experiences.map((exp) => (
+          <div class="relative">
             <!-- Timeline dot -->
-            <div class="absolute left-0 md:left-1/2 w-3 h-3 bg-surface border-2 border-accent rounded-full -translate-x-1 md:-translate-x-1.5 mt-2">
-              {exp.current && (
-                <span class="absolute inset-0 rounded-full bg-accent/50 animate-ping"></span>
-              )}
-            </div>
-            
-            <!-- Content -->
-            <div class={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-              <div class="group">
-                <span class="inline-block text-accent font-mono text-sm mb-2">{exp.period}</span>
-                <h3 class="text-xl font-semibold text-text-primary mb-1">{exp.role}</h3>
-                <p class="text-text-secondary mb-4">{exp.company}</p>
-                
-                <ul class={`space-y-2 ${index % 2 === 0 ? 'md:ml-auto' : ''}`}>
-                  {exp.description.map(item => (
-                    <li class={`text-sm text-text-muted flex items-start gap-2 ${index % 2 === 0 ? 'md:flex-row-reverse md:text-right' : ''}`}>
-                      <span class="text-accent mt-1.5 flex-shrink-0">
-                        <svg class="w-1.5 h-1.5" fill="currentColor" viewBox="0 0 8 8">
-                          <circle cx="4" cy="4" r="4"/>
-                        </svg>
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div class="absolute -left-8 top-1.5 flex items-center justify-center">
+              <div class="w-[11px] h-[11px] bg-surface border-2 border-text-muted rounded-full relative">
+                {exp.current && (
+                  <span class="absolute inset-0 rounded-full bg-accent/50 animate-ping"></span>
+                )}
+                {exp.current && (
+                  <div class="absolute inset-0 rounded-full border-2 border-accent bg-surface"></div>
+                )}
               </div>
             </div>
             
-            <!-- Spacer for alternating layout -->
-            <div class="hidden md:block flex-1"></div>
+            <!-- Content -->
+            <div>
+              <span class="inline-block text-text-muted font-mono text-sm mb-3">{exp.period}</span>
+              <h3 class="text-xl font-semibold text-text-primary mb-4">
+                {exp.role} <span class="text-accent">@ {exp.company}</span>
+              </h3>
+              
+              <ul class="space-y-3">
+                {exp.description.map(item => (
+                  <li class="text-sm text-text-muted flex items-start gap-3">
+                    <span class="text-accent mt-[7px] flex-shrink-0">
+                      <svg class="w-[6px] h-[6px]" fill="currentColor" viewBox="0 0 6 6">
+                        <polygon points="0,0 6,3 0,6"/>
+                      </svg>
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
