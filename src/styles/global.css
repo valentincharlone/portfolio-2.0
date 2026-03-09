@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+body:before {
+  --size: 40px;
+  --line: light-dark(#a0a0a01a, #9c9c9c1a);
+  content: "";
+  background: linear-gradient(90deg, var(--line) 1px, #0000 1px var(--size)) 17px 50% / var(--size) var(--size), linear-gradient(var(--line) 1px, #0000 1px var(--size)) 50% 19px / var(--size) var(--size);
+  transform-style: flat;
+  pointer-events: none;
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 65px;
+  -webkit-mask: linear-gradient(-30deg, #0000 70%, #fff);
+  mask: linear-gradient(-30deg, #0000 70%, #fff);
+}
+
+
 @layer base {
   * {
     @apply border-border;
