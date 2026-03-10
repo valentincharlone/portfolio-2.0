@@ -1,36 +1,57 @@
 ---
 const projects = [
   {
-    title: "Simple Profits – Analytics Dashboard",
+    title: "Invetory Management App",
     description:
-      "E-commerce analytics SaaS platform for store owners. Built complex data visualizations, dynamic filtering, REST APIs with Django, authentication, and third-party integrations.",
-    tech: ["React", "Recharts", "Django", "REST API"],
-    github: "#",
-    demo: "https://simpleprofits.ai",
-    featured: true,
+      "Streamline your inventory tracking with powerful analytics, real-time updates, and intelligent stock management. Everything you need to run your business efficiently.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Shadcn UI",
+      "Prisma",
+      "Stack Auth",
+      "Neon",
+      "Vercel",
+    ],
+    github: "https://github.com/valentincharlone/inventory-manage-app",
+    demo: "https://inventory-manage-app.vercel.app/",
   },
   {
-    title: "Tuxdi – Corporate Web Platform",
+    title: "TODO App",
     description:
-      "Product and marketing development across CMS platforms. Led Next.js 12→14 migration, built Back Office dashboards, integrated Strapi CMS, and implemented i18n and advanced animations.",
-    tech: ["Next.js", "TypeScript", "Framer Motion", "Strapi"],
-    github: "#",
-    demo: "https://tuxdi.com",
-    featured: true,
+      "A simple yet powerful TODO application built with modern web technologies. Features include task management, due dates, and a clean, intuitive interface.",
+    tech: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Vite",
+      "Kinde Auth",
+      "Vercel",
+    ],
+    github: "https://github.com/valentincharlone/soft-todo",
+    demo: "https://soft-todo.vercel.app/",
   },
   {
-    title: "Developer Portfolio",
+    title: "Remote Dev Platform",
     description:
-      "A minimal, modern portfolio built with Astro and TailwindCSS. Responsive, accessible, and optimized for performance with smooth animations.",
-    tech: ["Astro", "TypeScript", "Tailwind"],
-    github: "https://github.com/valentincharlone/portfolio-2.0",
-    demo: "#",
-    featured: false,
+      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    tech: ["React", "TypeScript", "React-Query", "CSS", "Vite", "Vercel"],
+    github: "https://github.com/valentincharlone/remote-dev",
+    demo: "https://remote-dev-self.vercel.app/",
+  },
+  {
+    title: "CorpComment",
+    description:
+      "An interactive platform for public feedback. Post your comments about companies, upvote the most helpful ones, and see what the community is saying.",
+    tech: ["React", "TypeScript", "Zustand", "CSS", "Vite", "Vercel"],
+    github: "https://github.com/valentincharlone/corp-comment",
+    demo: "https://corp-comment-cyan.vercel.app/",
   },
 ];
 ---
 
-<section id="projects" class="py-24 md:py-32 ">
+<section id="projects" class="py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
       <p class="text-accent font-mono text-sm mb-4">My work</p>
@@ -50,11 +71,11 @@ const projects = [
             <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
             <div class="relative">
-              {project.featured && (
+              {/* {project.featured && (
                 <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-medium text-accent bg-accent/10 rounded-full mb-4">
                   Featured
                 </span>
-              )}
+              )} */}
 
               <h3 class="text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-300">
                 {project.title}

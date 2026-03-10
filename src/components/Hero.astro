@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import profilImage from "../../public/vachi.jpg";
+
 const socialLinks = [
   {
     name: "GitHub",
@@ -31,8 +34,8 @@ const socialLinks = [
   </div>
 
   <div class="relative max-w-4xl mx-auto px-6 text-center">
-    <img
-      src="/public/vachi.jpg"
+    <Image
+      src={profilImage}
       alt="Valentin Charlone"
       class="w-32 h-32 object-cover rounded-full mx-auto mb-6 opacity-0 animate-fade-in-up animation-delay-100 transition-all duration-300"
     />
