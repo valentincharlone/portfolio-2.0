@@ -1,46 +1,5 @@
 ---
-const experiences = [
-  {
-    company: 'Simple Profits',
-    role: 'Frontend Freelance → Full Stack Developer',
-    period: 'Feb 2025 – Jan 2026',
-    description: [
-      'Led the development of a scalable analytics dashboard for e-commerce store owners, handling real-time sales and performance data',
-      'Built complex data visualizations and dynamic filtering systems using React and Recharts',
-      'Designed and integrated REST APIs using Django REST Framework',
-      'Optimized ORM queries and improved dashboard performance and data response times',
-      'Implemented authentication, protected routes, and session management',
-      'Integrated third-party e-commerce platforms and automated sales data ingestion'
-    ],
-    current: false
-  },
-  {
-    company: 'Tuxdi',
-    role: 'Frontend Engineer',
-    period: 'April 2023 – July 2025',
-    description: [
-      'Led migration from Next.js 12 to Next.js 14, improving maintainability and performance',
-      'Developed scalable and reusable component architectures across product and marketing platforms',
-      'Built Back Office dashboards with key metrics for media managers',
-      'Implemented full internationalization (ES/EN) for US-based clients',
-      'Integrated Strapi CMS for dynamic content management',
-      'Implemented advanced animation systems using Framer Motion and GSAP'
-    ],
-    current: false
-  },
-  {
-    company: 'Freelance',
-    role: 'Frontend Developer',
-    period: 'July 2022 – Present',
-    description: [
-      'Designed and developed custom web solutions for local businesses using React',
-      'Gathered requirements directly from clients and translated them into scalable technical implementations',
-      'Built responsive applications with modern frontend tooling and reusable components',
-      'Delivered iterative releases with continuous client feedback'
-    ],
-    current: true
-  }
-];
+import { experiences } from "@/lib/data";
 ---
 
 <section id="experience" class="py-24 md:py-32">
@@ -56,7 +15,7 @@ const experiences = [
       <div class="absolute left-[5px] top-2 bottom-0 w-px bg-border"></div>
       
       <div class="space-y-14">
-        {experiences.map((exp) => (
+        {experiences?.map((exp) => (
           <div class="relative">
             <!-- Timeline dot -->
             <div class="absolute -left-8 top-1.5 flex items-center justify-center">
@@ -78,7 +37,7 @@ const experiences = [
               </h3>
               
               <ul class="space-y-3">
-                {exp.description.map(item => (
+                {exp?.description?.map(item => (
                   <li class="text-sm text-text-muted flex items-start gap-3">
                     <span class="text-accent mt-[7px] flex-shrink-0">
                       <svg class="w-[6px] h-[6px]" fill="currentColor" viewBox="0 0 6 6">
