@@ -1,3 +1,5 @@
+import { desc, g } from "framer-motion/client";
+
 export const skills = [
   { name: "React", icon: "simple-icons:react" },
   { name: "Next.js", icon: "simple-icons:nextdotjs" },
@@ -142,5 +144,21 @@ export const projects = [
     tech: ["React", "TypeScript", "Zustand", "CSS", "Vite", "Vercel"],
     github: "https://github.com/valentincharlone/corp-comment",
     demo: "https://corp-comment-cyan.vercel.app/",
+  },
+  {
+    title: "Pet Soft App",
+    description:
+      "Management software for dog daycare centers that allows registering pets, managing reservations, and processing secure payments with Stripe.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Shadcn UI",
+      "Prisma",
+      "Stripe",
+      "Vercel",
+    ],
+    github: "https://github.com/valentincharlone/petsoft",
+    demo: "https://petsoft-blue.vercel.app/",
   },
 ];
