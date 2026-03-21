@@ -1,10 +1,9 @@
 ---
 import { skills } from "@/lib/data";
 import { Icon } from "astro-icon/components";
-
 ---
 
-<section id="skills" class="py-24 md:py-32">
+<section id="skills" class="py-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
       <p class="text-accent font-mono text-sm mb-4">What I work with</p>
@@ -16,26 +15,27 @@ import { Icon } from "astro-icon/components";
       </p>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
       {
-        skills && skills.map((skill) => (
-          <div class="group relative p-6 bg-surface border border-border rounded-xl hover:border-accent/50 hover:bg-surface-hover transition-all duration-300">
-            <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+        skills &&
+          skills.map((skill) => (
+            <div class="group relative p-4 bg-surface border border-border rounded-sm hover:border-accent/50 hover:bg-surface-hover transition-all duration-300">
+              <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
 
-            <div class="relative flex flex-col items-center text-center">
-              <div class="text-text-muted group-hover:text-accent transition-colors duration-300 mb-3">
-                <Icon
-                  name={skill.icon}
-                  class="w-8 h-8 text-zinc-400 group-hover:text-white transition-colors duration-300"
-                />
+              <div class="relative flex flex-col items-center text-center">
+                <div class="text-text-muted group-hover:text-accent transition-colors duration-300 mb-2">
+                  <Icon
+                    name={skill.icon}
+                    class="w-6 h-6 text-zinc-400 group-hover:text-white transition-colors duration-300"
+                  />
+                </div>
+
+                <span class="text-xs font-medium text-text-secondary group-hover:text-text-primary transition-colors duration-300">
+                  {skill.name}
+                </span>
               </div>
-
-              <span class="text-sm font-medium text-text-secondary group-hover:text-text-primary transition-colors duration-300">
-                {skill.name}
-              </span>
             </div>
-          </div>
-        ))
+          ))
       }
     </div>
   </div>
