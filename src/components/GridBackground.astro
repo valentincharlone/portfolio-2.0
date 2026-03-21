@@ -1,0 +1,100 @@
+---
+
+---
+
+<div
+  id="grid-bg"
+  class="fixed inset-0 w-full h-full pointer-events-none overflow-hidden z-0"
+>
+  <div id="grid-container" class="pointer-events-auto w-full h-full"></div>
+</div>
+
+<style>
+  #grid-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .grid-cell {
+    display: block;
+    box-sizing: border-box;
+    border: 0.5px solid hsl(0, 0%, 86%); /* subido de 14% a 22% */
+    opacity: 0.6; /* subido de 0.3 a 0.6 */
+    transition:
+      opacity 0.15s ease,
+      background-color 0.15s ease;
+    cursor: default;
+  }
+
+  .grid-cell.lit {
+    background-color: hsl(160 80% 55% / 0.12);
+    opacity: 1;
+  }
+
+  .grid-cell.fading {
+    background-color: hsl(160 80% 55% / 0.06);
+    opacity: 0.6;
+    transition:
+      opacity 0.6s ease,
+      background-color 0.6s ease;
+  }
+</style>
+
+<script>
+  const CELL_SIZE = 48;
+
+  function setup() {
+    const container = document.getElementById("grid-container") as HTMLElement;
+    if (!container) return;
+
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const cols = Math.ceil(W / CELL_SIZE);
+    const rows = Math.ceil(H / CELL_SIZE);
+
+    container.style.gridTemplateColumns = `repeat(${cols}, ${CELL_SIZE}px)`;
+    container.style.gridTemplateRows = `repeat(${rows}, ${CELL_SIZE}px)`;
+    container.style.width = `${cols * CELL_SIZE}px`;
+    container.style.height = `${rows * CELL_SIZE}px`;
+    container.innerHTML = "";
+
+    const total = rows * cols;
+    for (let i = 0; i < total; i++) {
+      const cell = document.createElement("div");
+      cell.className = "grid-cell";
+      container.appendChild(cell);
+    }
+
+    const cells = container.querySelectorAll<HTMLElement>(".grid-cell");
+
+    container.addEventListener("mousemove", (e) => {
+      const rect = container.getBoundingClientRect();
+      const col = Math.floor((e.clientX - rect.left) / CELL_SIZE);
+      const row = Math.floor((e.clientY - rect.top) / CELL_SIZE);
+      const idx = row * cols + col;
+
+      if (idx >= 0 && idx < cells.length) {
+        const cell = cells[idx];
+        if (!cell.classList.contains("lit")) {
+          cell.classList.remove("fading");
+          cell.classList.add("lit");
+          setTimeout(() => {
+            cell.classList.remove("lit");
+            cell.classList.add("fading");
+            setTimeout(() => cell.classList.remove("fading"), 600);
+          }, 300);
+        }
+      }
+    });
+  }
+
+  // Esperar a que el DOM esté completamente listo
+  if (document.readyState === "complete") {
+    setup();
+  } else {
+    window.addEventListener("load", setup);
+  }
+
+  window.addEventListener("resize", setup);
+</script>
