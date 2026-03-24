@@ -1,4 +1,5 @@
 ---
+import Analytics from '@vercel/analytics/astro'
 interface Props {
   title: string;
   description?: string;
@@ -21,6 +22,7 @@ const {
     <title>{title}</title>
   </head>
   <body>
+    <Analytics />
     <slot />
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" is:inline
     ></script>
