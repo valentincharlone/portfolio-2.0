@@ -161,4 +161,19 @@ export const projects = [
     github: "https://github.com/valentincharlone/petsoft",
     demo: "https://petsoft-blue.vercel.app/",
   },
+  {
+    title: "Inverti AR – Calculadora de Comisiones",
+    description:
+      "Web app to calculate investment commissions for the Argentine market. Compare brokers across different asset types — stocks, CEDEARs, bonds, and more — to find the most cost-effective option for each operation.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Shadcn UI",
+      "Vercel",
+      "Framer Motion",
+    ],
+    github: "https://github.com/valentincharlone/inverti-ar-calculate",
+    demo: "https://inverti-calculate-ar.vercel.app/",
+  },
 ];
