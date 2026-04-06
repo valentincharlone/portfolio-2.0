@@ -24,7 +24,7 @@ export const socialLinks = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/valentincharlone",
+    href: "https://www.linkedin.com/in/valentin-charlone",
     icon: `simple-icons:linkedin`,
     size: 28,
   },
