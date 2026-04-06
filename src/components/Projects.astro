@@ -1,6 +1,8 @@
 ---
 import { projects } from "@/lib/data";
 import { Icon } from "astro-icon/components";
+
+const projectsSlice = projects.slice(0, 6);
 ---
 
 <section id="projects" class="py-16">
@@ -18,7 +20,7 @@ import { Icon } from "astro-icon/components";
 
     <div class="grid md:grid-cols-2 gap-6">
       {
-        projects.map((project, index) => (
+        projectsSlice.map((project, index) => (
           <article class="group relative bg-surface border border-border rounded-sm p-6 md:p-8 hover:border-accent/30 transition-all duration-300  hover:shadow-accent/5">
             <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 " />
 

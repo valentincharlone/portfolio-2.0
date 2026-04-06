@@ -115,6 +115,21 @@ export const projects = [
     demo: "https://inventory-manage-app.vercel.app/",
   },
   {
+    title: "Inverti AR – Calculadora de Comisiones",
+    description:
+      "Web app to calculate investment commissions for the Argentine market. Compare brokers across different asset types — stocks, CEDEARs, bonds, and more — to find the most cost-effective option for each operation.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Shadcn UI",
+      "Vercel",
+      "Framer Motion",
+    ],
+    github: "https://github.com/valentincharlone/inverti-ar-calculate",
+    demo: "https://inverti-calculate-ar.vercel.app/",
+  },
+  {
     title: "TODO App",
     description:
       "A simple yet powerful TODO application built with modern web technologies. Features include task management, due dates, and a clean, intuitive interface.",
@@ -160,20 +175,5 @@ export const projects = [
     ],
     github: "https://github.com/valentincharlone/petsoft",
     demo: "https://petsoft-blue.vercel.app/",
-  },
-  {
-    title: "Inverti AR – Calculadora de Comisiones",
-    description:
-      "Web app to calculate investment commissions for the Argentine market. Compare brokers across different asset types — stocks, CEDEARs, bonds, and more — to find the most cost-effective option for each operation.",
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "TailwindCSS",
-      "Shadcn UI",
-      "Vercel",
-      "Framer Motion",
-    ],
-    github: "https://github.com/valentincharlone/inverti-ar-calculate",
-    demo: "https://inverti-calculate-ar.vercel.app/",
   },
 ];
